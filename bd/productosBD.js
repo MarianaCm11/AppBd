@@ -5,7 +5,7 @@ function validarDatos(producto) {
     var valido = false;
     if (producto.nombre != undefined && producto.cantidad != undefined && producto.precio != undefined) {
         valido = true;
-    }
+    }0
     return valido;
 }
 

@@ -16,7 +16,7 @@ async function mostrarUsuarios() {
     //console.log(usuarios.id);
     usuariosValidos = [];
     usuarios.forEach(usuario => { //usuarios solo contiene un registro y el foreach me desglosa la informacion
-        // -console.log(usuario.data());
+        //console.log(usuario.data());
         const usuario1 = new Usuario({ id: usuario.id, ...usuario.data() });
         if (validarDatos(usuario1.getUsuario)) {
             usuariosValidos.push(usuario1.getUsuario);
@@ -25,7 +25,7 @@ async function mostrarUsuarios() {
     //console.log(usuariosValidos);
     return usuariosValidos;
 }
-//mostrarUsuarios();
+mostrarUsuarios();
 
 async function buscarPorId(id) {
     const usuario=await usuariosBD.doc(id).get();
